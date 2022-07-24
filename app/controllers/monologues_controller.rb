@@ -46,6 +46,6 @@ class MonologuesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def monologue_params
-      params.require(:monologue).permit(:name, :belongs_to, :play)
+      params.permit(:name, :content, :genre, :length, :is_copy_available, :gender, :char_name, :age, :play_id)
     end
 end
