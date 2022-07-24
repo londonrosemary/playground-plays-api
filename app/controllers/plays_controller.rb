@@ -46,6 +46,6 @@ class PlaysController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def play_params
-      params.require(:play).permit(:author, :genre, :length, :num_character, :time_period, :copy_avail, :user_id)
+      params.permit(:name, :author, :genre, :length, :num_character, :time_period, :copy_avail, :synopsis)
     end
 end
