@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-    has_and_belongs_to_many :plays
+    has_many :collections
+    has_many :plays, through: :collections
 end

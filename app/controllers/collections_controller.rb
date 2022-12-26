@@ -46,6 +46,6 @@ class CollectionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def collection_params
-      params.fetch(:collection, {})
+      params.permit(:user_id, :play_id)
     end
 end
